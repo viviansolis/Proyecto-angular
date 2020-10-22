@@ -1,0 +1,32 @@
+<div class="container">
+  <div class="card">
+      <div class="card-header">
+        Alumnos
+      </div>
+      <div class="card-body">
+        <div class="form-group">
+            <label for="a">ID:</label>
+            <input type="text" class="form-control" [(ngModel)]="alumno.idalumno">
+        </div>
+        <div class="form-group">
+          <label for="a">Nombres:</label>
+          <input type="text" class="form-control" [(ngModel)]="alumno.nombre">
+        </div>
+        <div class="form-group">
+          <label for="a">Dirección:</label>
+          <input type="text" class="form-control" [(ngModel)]="alumno.direccion">
+        </div>
+        <div class="form-group">
+          <label for="a">Escuela:</label>
+          <select class="form-control" [(ngModel)]="alumno.escuela">
+              <option>Seleccionar Escuela</option>
+              <option *ngFor= "let escuela of escuelas" value="{{escuela.idescuela}}">{{escuela.nombre}}</option>
+          </select>
+        </div>
+        <div class="form-group">
+           <button (click) = "this.nuevoAlumno()" class="btn btn-primary">Guardar</button>
+        </div>
+      </div>
+    </div>
+</div>
+

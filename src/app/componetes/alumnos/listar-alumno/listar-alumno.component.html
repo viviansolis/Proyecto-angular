@@ -1,0 +1,27 @@
+<div class="container">
+  <div class="card">
+      <div class="card-header">
+        Listar Alumnos
+      </div>
+      <div class="card-body">
+          <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">ID</th>
+                  <th scope="col">Nombre</th>
+                  <th scope="col">Dirección</th>
+                  <th scope="col">Escuela</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor = "let alumno of alumnos">
+                  <td>{{alumno.idalumno}}</td>
+                  <td>{{alumno.nombre}}</td>
+                  <td>{{alumno.direccion}}</td>
+                  <td>{{alumno.escuela}}</td>
+                </tr>
+              </tbody>
+            </table>
+      </div>
+    </div>
+</div>
